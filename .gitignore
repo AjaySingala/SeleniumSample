@@ -3,13 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-/SeleniumTestSample/.vs/
-/SeleniumTestSample/packages/
-/SeleniumTestSample/SampleWebApp/bin/
-/SeleniumTestSample/SampleWebApp/obj/
-/SeleniumTestSample/SeleniumTestSample/bin/
-/SeleniumTestSample/SeleniumTestSample/obj/
-/SeleniumTestSample/TestResults
+/.vs/
+/packages/
+/SampleWebApp/bin/
+/SampleWebApp/obj/
+/SeleniumTestSample/bin/
+/SeleniumTestSample/obj/
+/TestResults
 
 
 # User-specific files
