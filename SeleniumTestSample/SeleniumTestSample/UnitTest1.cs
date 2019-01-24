@@ -58,7 +58,7 @@ namespace SeleniumTestSample
             switch (browser)
             {
                 case "Chrome":
-                    driver = new ChromeDriver();
+                    driver = new ChromeDriver(@".\");
                     break;
                 case "Firefox":
                     driver = new FirefoxDriver();
@@ -67,7 +67,7 @@ namespace SeleniumTestSample
                     driver = new InternetExplorerDriver();
                     break;
                 default:
-                    driver = new ChromeDriver();
+                    driver = new ChromeDriver(@".\");
                     break;
             }
 
