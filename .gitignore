@@ -10,6 +10,9 @@
 /SeleniumTestSample/bin/
 /SeleniumTestSample/obj/
 /TestResults
+/SeleniumWebDriverTest/TestResults
+/SeleniumWebDriverTest/bin
+/SeleniumWebDriverTest/obj
 
 
 # User-specific files

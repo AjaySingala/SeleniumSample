@@ -11,7 +11,7 @@ namespace SeleniumTestSample
     /// <summary>
     /// Summary description for MySeleniumTests
     /// </summary>
-    //[TestClass]
+    [TestClass]
     public class MySeleniumTests
     {
         private TestContext testContextInstance;
