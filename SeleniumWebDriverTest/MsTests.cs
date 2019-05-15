@@ -18,7 +18,7 @@ namespace SeleniumWebDriverTest
     [TestClass]
     public class MsTests
     {
-        [TestMethod]
+        //[TestMethod]
         public void TestWithChromeDriver()
         {
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -35,7 +35,7 @@ namespace SeleniumWebDriverTest
             }
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void TestWithEdgeDriver()
         {
             using (var driver = new EdgeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)))

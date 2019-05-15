@@ -5,15 +5,15 @@
 
 /.vs/
 /packages/
+/TestResults/
 /SampleWebApp/bin/
 /SampleWebApp/obj/
 /SeleniumTestSample/bin/
 /SeleniumTestSample/obj/
-/TestResults
-/SeleniumWebDriverTest/TestResults
-/SeleniumWebDriverTest/bin
-/SeleniumWebDriverTest/obj
-
+/SeleniumTestSample/TestResults/
+/SeleniumWebDriverTest/TestResults/
+/SeleniumWebDriverTest/bin/
+/SeleniumWebDriverTest/obj/
 
 # User-specific files
 *.suo
