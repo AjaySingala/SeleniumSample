@@ -29,6 +29,7 @@ namespace SeleniumWebDriverTest
         [Fact]
         public bool TestWithChromeDriver()
         {
+            path = @"C:\Software\chromedriver_win32_76.0.3809.126";
             using (var driver = new ChromeDriver(path))
             {
                 // Navigate to example page
@@ -65,6 +66,7 @@ namespace SeleniumWebDriverTest
         [Fact]
         public bool TestWithEdgeDriver()
         {
+            path = @"C:\Windows\System32";
             using (var driver = new EdgeDriver(path))
             {
                 // Navigate to example page
