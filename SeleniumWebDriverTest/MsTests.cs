@@ -18,35 +18,45 @@ namespace SeleniumWebDriverTest
     [TestClass]
     public class MsTests
     {
-        //[TestMethod]
+        //var text = "TFS Test API";
+        //var text = "TEST FRAMEWORK";
+        string text = "AUTHOR";
+
+        [TestMethod]
         public void TestWithChromeDriver()
         {
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var path = @"C:\Software\chromedriver_win32_76.0.3809.126";
             using (var driver = new ChromeDriver(path))
             {
                 driver.Navigate().GoToUrl(@"https://automatetheplanet.com/multiple-files-page-objects-item-templates/");
-                var link = driver.FindElement(By.PartialLinkText("TFS Test API"));
+                var link = driver.FindElement(By.PartialLinkText(text));
+                Thread.Sleep(500);
                 var jsToBeExecuted = $"window.scroll(0, {link.Location.Y});";
                 ((IJavaScriptExecutor)driver).ExecuteScript(jsToBeExecuted);
                 var wait = new WebDriverWait(driver, TimeSpan.FromMinutes(1));
-                var clickableElement = wait.Until(ExpectedConditions.ElementToBeClickable(By.PartialLinkText("TFS Test API")));
+                var clickableElement = wait.Until(ExpectedConditions.ElementToBeClickable(By.PartialLinkText(text)));
                 clickableElement.Click();
-
+                Thread.Sleep(500);
             }
         }
 
-        //[TestMethod]
+        [TestMethod]
         public void TestWithEdgeDriver()
         {
-            using (var driver = new EdgeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)))
+            var path = @"C:\Windows\System32";
+            //using (var driver = new EdgeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)))
+            using (var driver = new EdgeDriver(path))
             {
                 driver.Navigate().GoToUrl(@"https://automatetheplanet.com/multiple-files-page-objects-item-templates/");
-                var link = driver.FindElement(By.PartialLinkText("TFS Test API"));
+                var link = driver.FindElement(By.PartialLinkText(text));
+                Thread.Sleep(500);
                 var jsToBeExecuted = $"window.scroll(0, {link.Location.Y});";
                 ((IJavaScriptExecutor)driver).ExecuteScript(jsToBeExecuted);
                 var wait = new WebDriverWait(driver, TimeSpan.FromMinutes(1));
-                var clickableElement = wait.Until(ExpectedConditions.ElementToBeClickable(By.PartialLinkText("TFS Test API")));
+                var clickableElement = wait.Until(ExpectedConditions.ElementToBeClickable(By.PartialLinkText(text)));
                 clickableElement.Click();
+                Thread.Sleep(2000);
             }
         }
 
